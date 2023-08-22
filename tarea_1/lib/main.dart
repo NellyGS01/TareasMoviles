@@ -69,6 +69,7 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                     ),
                     SizedBox(
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Flutter McFlutter',
@@ -82,6 +83,13 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                           ),
                         ],
                       ),
+                    )
+                  ],
+                ),
+                const Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 100,
                     )
                   ],
                 ),
@@ -137,7 +145,7 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                       children: [
                         IconButton(
                           isSelected: standardSelected2,
-                          icon: Icon(Icons.timer, color: Colors.black),
+                          icon: const Icon(Icons.timer, color: Colors.black),
                           onPressed: () {
                             final snackBar = SnackBar(
                               content: const Text('Yay! A SnackBar!'),
@@ -153,13 +161,13 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                         ),
                       ],
                     ),
-                    Column(
+                    const Column(
                       children: [Icon(Icons.smartphone, color: Colors.black)],
                     ),
-                    Column(
+                    const Column(
                       children: [Icon(Icons.smartphone, color: Colors.black)],
                     ),
-                    Column(
+                    const Column(
                       children: [
                         SizedBox(
                           width: 1,
