@@ -41,7 +41,12 @@ class DemoIconToggleButtons extends StatefulWidget {
 class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
   bool standardSelected = false;
   bool standardSelected2 = false;
+  bool standardSelected3 = false;
+  bool standardSelected4 = false;
   Color _iconColor = Colors.black;
+  Color _iconColor2 = Colors.black;
+  Color _iconColor3 = Colors.black;
+  Color _iconColor4 = Colors.black;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -119,7 +124,7 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                     const Column(
                       children: [
                         SizedBox(
-                          width: 3,
+                          width: 1,
                         )
                       ],
                     ),
@@ -137,18 +142,8 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                                 _iconColor = Colors.black;
                               }
                             });
-                          },
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        IconButton(
-                          isSelected: standardSelected2,
-                          icon: const Icon(Icons.timer, color: Colors.black),
-                          onPressed: () {
                             final snackBar = SnackBar(
-                              content: const Text('Yay! A SnackBar!'),
+                              content: const Text('Icono de accesibility'),
                               action: SnackBarAction(
                                 label: 'Undo',
                                 onPressed: () {},
@@ -161,11 +156,89 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
                         ),
                       ],
                     ),
-                    const Column(
-                      children: [Icon(Icons.smartphone, color: Colors.black)],
+                    Column(
+                      children: [
+                        IconButton(
+                          isSelected: standardSelected2,
+                          icon: Icon(Icons.timer, color: _iconColor2),
+                          onPressed: () {
+                            setState(() {
+                              standardSelected2 = !standardSelected2;
+                              if (standardSelected2 == false) {
+                                _iconColor2 = Colors.cyan;
+                              } else {
+                                _iconColor2 = Colors.black;
+                              }
+                            });
+                            final snackBar = SnackBar(
+                              content: const Text('Icono de timer'),
+                              action: SnackBarAction(
+                                label: 'Undo',
+                                onPressed: () {},
+                              ),
+                            );
+
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          },
+                        ),
+                      ],
                     ),
-                    const Column(
-                      children: [Icon(Icons.smartphone, color: Colors.black)],
+                    Column(
+                      children: [
+                        IconButton(
+                          isSelected: standardSelected3,
+                          icon: Icon(Icons.smartphone, color: _iconColor3),
+                          onPressed: () {
+                            setState(() {
+                              standardSelected3 = !standardSelected3;
+                              if (standardSelected3 == false) {
+                                _iconColor3 = Colors.cyan;
+                              } else {
+                                _iconColor3 = Colors.black;
+                              }
+                            });
+                            final snackBar = SnackBar(
+                              content: const Text('Icono de smarthphone'),
+                              action: SnackBarAction(
+                                label: 'Undo',
+                                onPressed: () {},
+                              ),
+                            );
+
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          },
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        IconButton(
+                          isSelected: standardSelected4,
+                          icon: Icon(Icons.smartphone, color: _iconColor4),
+                          onPressed: () {
+                            setState(() {
+                              standardSelected4 = !standardSelected4;
+                              if (standardSelected4 == false) {
+                                _iconColor4 = Colors.cyan;
+                              } else {
+                                _iconColor4 = Colors.black;
+                              }
+                            });
+                            final snackBar = SnackBar(
+                              content: const Text('Icono de smarthphone'),
+                              action: SnackBarAction(
+                                label: 'Undo',
+                                onPressed: () {},
+                              ),
+                            );
+
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          },
+                        ),
+                      ],
                     ),
                     const Column(
                       children: [
